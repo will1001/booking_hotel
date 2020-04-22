@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
-import CheckAvailability from '../CheckAvailability'
+import CheckAvailability from './CheckAvailability'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,7 +13,6 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'center',
       color: 'white',
       backgroundColor: 'grey',
-      minHeight: '100vh',
       maxWidth: '100%',
       '& img': {
         width: '100%',
@@ -26,11 +24,12 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center'
     },
     title: {
-      position: 'absolute',
       display: 'flex',
-      justifyContent
-      top: 0
-
+      justifyContent: 'center',
+      '& h1': {
+        position: 'absolute',
+        top: 0
+      }
     }
   })
 )

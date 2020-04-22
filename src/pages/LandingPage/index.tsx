@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import SlideShowBanner from '../../components/SlideShowBanner'
+import OurRoomSection from '../../components/OurRoomSection'
 
 interface Props {
 
@@ -9,7 +9,8 @@ interface Props {
 const LandingPage = (props: Props) => {
   return (
     <div>
-      <SlideShowBanner/>
+      <SlideShowBanner />
+      <OurRoomSection />
     </div>
   )
 }
