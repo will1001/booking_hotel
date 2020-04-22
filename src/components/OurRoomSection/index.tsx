@@ -6,7 +6,8 @@ import RoomCard from '../RoomCard'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      padding: theme.spacing(2)
+      padding: theme.spacing(2),
+      marginBottom: theme.spacing(2)
     //   backgroundColor: 'black'
     }
   })
@@ -25,19 +26,19 @@ const OurRoomSection = (props: Props) => {
       spacing={3}
     >
 
-      <Grid item xs={12} >
+      <Grid item xs={12}>
         <h1>Our Rooms</h1>
       </Grid>
 
-      <Grid item xs={4} >
+      <Grid item xs={12} md={4}>
         <RoomCard />
       </Grid>
 
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <RoomCard />
       </Grid>
 
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <RoomCard />
       </Grid>
 
