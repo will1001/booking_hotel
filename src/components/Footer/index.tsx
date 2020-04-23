@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       backgroundColor: 'black',
       color: 'white',
-      flexGrow: 1
+      flexGrow: 1,
+      marginTop: 35
 
     }
   })
