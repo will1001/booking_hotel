@@ -5,7 +5,6 @@ import DateFnsUtils from '@date-io/date-fns'
 import Grid from '@material-ui/core/Grid'
 import {
   MuiPickersUtilsProvider,
-  // KeyboardTimePicker,
   KeyboardDatePicker
 } from '@material-ui/pickers'
 import TextField from '@material-ui/core/TextField'
