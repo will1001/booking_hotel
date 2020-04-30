@@ -14,22 +14,19 @@ function App () {
   return (
     <div className="App">
       <Router>
-        <header>
-          <Header/>
-        </header>
-        <main>
-          <Switch>
-            <Route path="/search">
-              <SearchRoom />
-            </Route>
-            <Route path="/">
-              <LandingPage />
-            </Route>
-          </Switch>
-        </main>
-        <Footer>
-          <Footer/>
-        </Footer>
+        <Switch>
+
+          <Route path="/search">
+            <Header fixed={false} bg='#000' />
+            <SearchRoom />
+          </Route>
+          <Route path="/">
+            <Header fixed={true} bg='transparent' />
+            <LandingPage />
+          </Route>
+        </Switch>
+        <Footer/>
+
       </Router>
 
     </div>

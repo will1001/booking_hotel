@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import FilterBox from '../../components/FilterBox'
 import RoomCard from '../../components/RoomCard'
+import RoomCardListView from '../../components/RoomCardListView'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 
@@ -17,55 +18,50 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-interface Props {
-
-}
-
-const SearchRoom = (props: Props) => {
+const SearchRoom = () => {
   const classes = useStyles()
-  const [gridView, SetGridView] = useState(true)
+  const [ViewMode, SetViewMode] = useState('list')
 
-  const changeView = () => {
-    SetGridView(!gridView)
-  }
+  const changeView = (view: string) => SetViewMode(view)
+
   return (
     <div>
       <FilterBox changeView={changeView} />
       <Grid
         className={classes.RoomContainer}
         container spacing={3}>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
-        <Grid item xs={gridView ? 4 : 12}>
-          <RoomCard/>
+        <Grid item xs={ViewMode === 'grid' ? 4 : 12}>
+          {ViewMode === 'grid' ? <RoomCard/> : <RoomCardListView/>}
         </Grid>
       </Grid>
     </div>

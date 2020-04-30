@@ -124,12 +124,12 @@ const FilterBox = (props: Props) => {
           </Select>
         </FormControl>
         <IconButton
-          onClick={props.changeView}
+          onClick={() => props.changeView('grid')}
           color="primary" aria-label="grid view" component="span">
           <GridOnIcon/>
         </IconButton>
         <IconButton
-          onClick={props.changeView}
+          onClick={() => props.changeView('list')}
           color="primary" aria-label="list view" component="span">
           <ListIcon />
         </IconButton>

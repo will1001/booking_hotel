@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { makeStyles, withStyles, createStyles } from '@material-ui/core/styles'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
 import 'date-fns'
 import DateFnsUtils from '@date-io/date-fns'
 import Grid from '@material-ui/core/Grid'
@@ -8,15 +8,17 @@ import {
   KeyboardDatePicker
 } from '@material-ui/pickers'
 import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
 import HotelIcon from '@material-ui/icons/Hotel'
+import ButtonWithIcon from '../../ButtonWithIcon'
+
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
       flexGrow: 1,
       backgroundColor: 'rgba(0, 0, 0, 0.7)',
       position: 'absolute',
-      bottom: 50
+      bottom: 50,
+      zIndex: 1
     },
     dateInput: {
       '& .MuiInputAdornment-root ,.MuiSvgIcon-root ,.MuiInputLabel-root ,.MuiInputBase-root ': {
@@ -39,23 +41,9 @@ const useStyles = makeStyles(() =>
         borderColor: 'white'
       }
 
-    },
-    button: {
-      margin: 15,
-      '& .MuiButton-root ,.MuiButtonBase-root': {
-        color: 'white',
-        backgroundcolor: 'white'
-      }
     }
   })
 )
-
-const CheckRoomButton = withStyles(() => ({
-  root: {
-    color: 'white',
-    borderColor: 'white'
-  }
-}))(Button)
 
 const CheckAvailability = () => {
   const classes = useStyles()
@@ -130,13 +118,11 @@ const CheckAvailability = () => {
               shrink: true
             }}
           />
-          <CheckRoomButton
-            variant="outlined"
-            className={classes.button}
-            endIcon={<HotelIcon />}
+          <ButtonWithIcon
+            icon={HotelIcon}
           >
-        Check Room
-          </CheckRoomButton>
+            Check Room
+          </ButtonWithIcon>
         </Grid>
       </Grid>
     </div>
